@@ -1,4 +1,5 @@
 ## Muted News
+
 This is a React application that implements infinite scrolling using a mock API. The application loads and displays a list of items and loads more items as the user scrolls down. It is assignment given by Muted News.
 
 ## Installation

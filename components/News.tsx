@@ -3,14 +3,16 @@ import NewsItem from './NewsItem'
 import Spinner from './Spinner'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
-const News: React.FC = props => {
+const News: React.FC = () => {
   const [articles, setArticles] = useState([])
   const [loading, setLoading] = useState(true)
   const [page, setPage] = useState(1)
   const [totalResults, setTotalResults] = useState(0)
 
   const updateNews = async () => {
-    const url = `https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=${process.env.NEXT_PUBLIC_NEWS_API}&page=${page}&pageSize=${props.pageSize}`
+    const url = `https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=${
+      process.env.NEXT_PUBLIC_NEWS_API
+    }&page=${page ?? 1}&pageSize=10`
     setLoading(true)
     const response = await fetch(url)
     const parsedData = await response.json()
@@ -26,7 +28,7 @@ const News: React.FC = props => {
   const fetchMoreData = async () => {
     const url = `https://newsapi.org/v2/top-headlines?country=in&category=general&apiKey=${
       process.env.NEXT_PUBLIC_NEWS_API
-    }&page=${page + 1}&pageSize=${props.pageSize}`
+    }&page=${page + 1}&pageSize=10`
     setPage(page + 1)
     const response = await fetch(url)
     const parsedData = await response.json()

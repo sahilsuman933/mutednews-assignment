@@ -1,8 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
 
-const NewsItem: React.FC = props => {
-  let { title, description, imageUrl, newsUrl, author, date, source } = props
+const NewsItem: React.FC<NewsItemProps> = props => {
+  const { title, description, imageUrl, newsUrl, author, date, source } = props
+
   return (
     <div className="my-3">
       <div className="card">
@@ -31,7 +32,7 @@ const NewsItem: React.FC = props => {
           <p className="card-text">
             <small className="text-muted">
               By {!author ? 'Unknown' : author} on{' '}
-              {new Date(date).toGMTString()}
+              {new Date(date).toUTCString()}
             </small>
           </p>
           <a
@@ -46,6 +47,16 @@ const NewsItem: React.FC = props => {
       </div>
     </div>
   )
+}
+
+interface NewsItemProps {
+  title: string
+  description: string
+  imageUrl: string
+  newsUrl: string
+  author: string
+  date: string
+  source: string
 }
 
 export default NewsItem

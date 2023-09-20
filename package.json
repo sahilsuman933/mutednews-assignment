@@ -1,0 +1,35 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Sahil's Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint .",
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stitches/react": "^1.2.8",
+    "@types/react": "^18.2.18",
+    "@types/react-dom": "^18.2.7",
+    "next": "^13.4.12",
+    "prettier": "^3.0.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-infinite-scroll-component": "^6.1.0",
+    "react-top-loading-bar": "^2.3.1",
+    "typescript": "^5.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "20.4.6",
+    "autoprefixer": "^10.4.15",
+    "eslint": "8.46.0",
+    "eslint-config-next": "13.4.12",
+    "eslint-config-prettier": "^8.9.0"
+  }
+}

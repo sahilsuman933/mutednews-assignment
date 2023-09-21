@@ -20,7 +20,7 @@ cd mutednews-assignment
 3. Set up environment variables:
 
 ```
-REACT_APP_NEWS_API=YOUR_KEY_NEWS_API_KEY
+NEXT_PUBLIC_NEWS_API=YOUR_KEY_NEWS_API_KEY
 ```
 
 4. Start the development server:
@@ -29,6 +29,7 @@ REACT_APP_NEWS_API=YOUR_KEY_NEWS_API_KEY
   npm start
 ```
 
+Note: Make sure to add the News API Key env file in base directory. Otherwise application will not work. 
 ## Screenshot
 
 ![1695248421](https://github.com/sahilsuman933/mutednews-assignment/assets/34382211/befecb61-0cae-4969-bce3-2f1fe480920f)

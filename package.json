@@ -1,7 +1,7 @@
 {
-  "name": "portfolio",
+  "name": "Mutednews Assignment",
   "version": "1.0.0",
-  "description": "Sahil's Website",
+  "description": "Mutednews Assignment",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
